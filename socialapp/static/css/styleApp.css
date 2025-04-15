@@ -1,0 +1,157 @@
+/*rsumo das cores:  #181818 #3A8EE6* #444444 #ABABAB #000000 #2A2A2A #FFFFFF/
+
+/* Base do corpo */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #181818; /* Fundo escuro */
+  margin: 0;
+  padding: 0;
+  color: #e0e0e0; /* Texto claro para contraste suave */
+}
+
+/* Container centralizado */
+.container {
+  max-width: 600px;
+  margin: 50px auto;
+  background: #2a2a2a; /* Cor escura, mais suave */
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.4); /* Sombra mais suave */
+}
+
+/* Estilo do formulário */
+textarea {
+
+  width: 92%;
+  height: 60px;
+  margin: 10px;
+  padding: 10px;
+  resize: none;
+  border: 10px;
+  border-radius: 20px;
+  border: 1px solid #444444; /* Borda suave */
+  background-color: #ababab; /* Fundo escuro no textarea */
+  color: #000000;
+  font-size: 16px;
+  ;
+}
+
+input[type="text"], textarea {
+  font-size: 16px;
+  color: #000000;
+}
+
+button {
+  background: #3a8ee6; /* Azul mais frio e suave */
+  color: #ffffff;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 20px;
+  font-weight: bold;
+  transition: background 0.5s ease;
+  margin-bottom: 15px;
+  margin-left: 15px;
+}
+input#usuario {
+  width: -webkit-fill-available;
+  margin: 10px;
+  border-radius: 10px;
+  height: 25px;
+}
+input#titulo {
+width: -webkit-fill-available;
+  margin: 10px;
+  border-radius: 10px;
+  height: 25px;
+  resize: initial;
+
+}
+label{
+  justify-content: left;
+
+}
+button:hover {
+  background: #2b7db7; /* Hover mais escuro */
+}
+
+/* Estilo dos posts */
+.post {
+  background: #2a2a2a;
+  padding: 15px;
+  margin-top: 10px;
+  border-radius: 12px;
+      box-shadow: 0 2px 6px 9px rgb(118 118 118 / 23%); /* Efeito de Sombra */
+  border-left: 4px solid #3a8ee6; /* Linha azul fria na lateral */
+}
+
+.post-header {
+  font-size: 14px;
+  font-weight: 700;
+  color: #3a8ee6; /* Azul mais frio para o nome do usuário */
+}
+
+.post-time {
+  font-size: 12px;
+  color: #757575; /* Cinza suave para a data */
+  margin-left: 8px;
+}
+
+h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 10px 0;
+  color: #e0e0e0; /* Título mais claro */
+}
+
+.post-actions {
+  margin-top: 12px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.post-actions button {
+  background: none;
+  color: #3a8ee6; /* Azul frio para os botões */
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  transition: color 0.2s;
+}
+
+.post-actions button:hover {
+  color: #2b7db7; /* Hover azul mais escuro */
+}
+
+/* Animação de fundo */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent url('https://cdn.dribbble.com/users/1739433/screenshots/11199795/cat-dribbble.gif') repeat;
+   opacity: 0.2; /* Menos opacidade para o fundo */
+  z-index: -1;
+  animation: starsMove 60s linear infinite;
+}
+
+@keyframes starsMove {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 10000px 10000px;
+  }
+}
+a{
+  transition: background 0.5s ease;
+  text-decoration: none;
+  color: #fdfdfe;
+}
+form
+{
+      border-radius: 5%;
+      box-shadow: 0 2px 6px 9px rgb(118 118 118 / 23%);
+}

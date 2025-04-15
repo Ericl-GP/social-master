@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  {% load static %}
+  <meta charset="UTF-8">
+  <title>StudyClass</title>
+  <link rel="stylesheet" href="{% static 'css/styleApp.css' %}">
+</head>
+<body>
+  <div class="container">
+    <h1>Social Class</h1>
+
+    <a href="{% url 'nova_postagem' %}">
+      <button style="margin-bottom: 20px;">+ Nova Postagem</button>
+    </a>
+
+    <div id="posts">
+      {% for post in posts %}
+  <div class="post" data-liked="false" data-disliked="false">
+    <div class="post-header">
+      <strong>@{{ post.usuario }}</strong> · <span class="post-time">{{ post.hora|date:"d/m/Y H:i" }}</span>
+    </div>
+    <h3>{{ post.titulo }}</h3>
+    <p>{{ post.conteudo }}</p>
+    <div class="post-actions">
+      <button onclick="like(this)">👍 Curtir <span class="like-count">0</span></button>
+      <button onclick="dislike(this)">👎 Descurtir <span class="dislike-count">0</span></button>
+      <button onclick="comment(this)">💬 Comentar</button>
+      <button onclick="share(this)">🔁 Compartilhar</button>
+    </div>
+  </div>
+{% endfor %}
+
+    </div>
+  </div>
+
+  <script src="{% static 'js/scriptApp.js' %}"></script>
+</body>
+</html>
